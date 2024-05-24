@@ -593,7 +593,9 @@ var _roughNotation = require("rough-notation");
 boxes.forEach((box)=>{
     const annotation = (0, _roughNotation.annotate)(box, {
         type: "box",
-        color: "#4C956C"
+        color: "#4C956C",
+        iterations: 1,
+        strokeWidth: 3
     });
     annotation.show();
 });
@@ -605,7 +607,8 @@ boxes.forEach((box)=>{
 circles.forEach((circle)=>{
     const annotation = (0, _roughNotation.annotate)(circle, {
         type: "circle",
-        color: "#4C956C"
+        color: "#4C956C",
+        animationDuration: 2000
     });
     annotation.show();
 });
@@ -617,7 +620,9 @@ circles.forEach((circle)=>{
 crossedOffs.forEach((crossedOff)=>{
     const annotation = (0, _roughNotation.annotate)(crossedOff, {
         type: "crossed-off",
-        color: "#4C956C"
+        color: "#4C956C",
+        iterations: 1,
+        animationDuration: 2000
     });
     annotation.show();
 });
@@ -629,7 +634,20 @@ crossedOffs.forEach((crossedOff)=>{
 highlights.forEach((highlight)=>{
     const annotation = (0, _roughNotation.annotate)(highlight, {
         type: "highlight",
-        color: "#FFC9B9"
+        color: "#FFC9B9",
+        iterations: 1,
+        animationDuration: 2000
+    });
+    annotation.show();
+});
+const multilines = document.querySelectorAll(".highlight__multi-line");
+multilines.forEach((highlight)=>{
+    const annotation = (0, _roughNotation.annotate)(highlight, {
+        type: "highlight",
+        color: "#FFC9B9",
+        multiline: true,
+        iterations: 1,
+        animationDuration: 2000
     });
     annotation.show();
 });
@@ -641,7 +659,8 @@ highlights.forEach((highlight)=>{
 strikes.forEach((strike)=>{
     const annotation = (0, _roughNotation.annotate)(strike, {
         type: "strike-through",
-        color: "#4C956C"
+        color: "#4C956C",
+        animationDuration: 2000
     });
     annotation.show();
 });
@@ -653,7 +672,10 @@ strikes.forEach((strike)=>{
 underlines.forEach((underline)=>{
     const annotation = (0, _roughNotation.annotate)(underline, {
         type: "underline",
-        color: "#4C956C"
+        color: "#4C956C",
+        strokeWidth: 1,
+        iterations: 3,
+        animationDuration: 2000
     });
     annotation.show();
 });

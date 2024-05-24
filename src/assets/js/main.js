@@ -9,7 +9,7 @@ import { annotate } from "rough-notation";
 */
 const boxes = document.querySelectorAll('.box');
 boxes.forEach(box => {
-    const annotation = annotate(box, { type: 'box', color: '#4C956C'});
+    const annotation = annotate(box, { type: 'box', color: '#4C956C', iterations: 1, strokeWidth: 3});
     annotation.show();
 });
 
@@ -23,7 +23,7 @@ boxes.forEach(box => {
 */
 const circles = document.querySelectorAll('.circle');
 circles.forEach(circle => {
-    const annotation = annotate(circle, { type: 'circle', color: '#4C956C'});
+    const annotation = annotate(circle, { type: 'circle', color: '#4C956C', animationDuration: 2000});
     annotation.show();
 });
 
@@ -37,7 +37,7 @@ circles.forEach(circle => {
 */
 const crossedOffs = document.querySelectorAll('.crossed-off');
 crossedOffs.forEach(crossedOff => {
-    const annotation = annotate(crossedOff, { type: 'crossed-off', color: '#4C956C'});
+    const annotation = annotate(crossedOff, { type: 'crossed-off', color: '#4C956C', iterations: 1, animationDuration: 2000});
     annotation.show();
 });
 
@@ -51,7 +51,13 @@ crossedOffs.forEach(crossedOff => {
 */
 const highlights = document.querySelectorAll('.highlight');
 highlights.forEach(highlight => {
-    const annotation = annotate(highlight, { type: 'highlight', color: '#FFC9B9'});
+    const annotation = annotate(highlight, { type: 'highlight', color: '#FFC9B9', iterations: 1, animationDuration: 2000});
+    annotation.show();
+});
+
+const multilines = document.querySelectorAll('.highlight__multi-line');
+multilines.forEach(highlight => {
+    const annotation = annotate(highlight, { type: 'highlight', color: '#FFC9B9', multiline: true, iterations: 1, animationDuration: 2000});
     annotation.show();
 });
 
@@ -62,7 +68,7 @@ highlights.forEach(highlight => {
 */
 const strikes = document.querySelectorAll('.strike');
 strikes.forEach(strike => {
-    const annotation = annotate(strike, { type: 'strike-through', color: '#4C956C'});
+    const annotation = annotate(strike, { type: 'strike-through', color: '#4C956C', animationDuration: 2000});
     annotation.show();
 });
 
@@ -76,6 +82,6 @@ strikes.forEach(strike => {
 */
 const underlines = document.querySelectorAll('.underline');
 underlines.forEach(underline => {
-    const annotation = annotate(underline, { type: 'underline', color: '#4C956C'});
+    const annotation = annotate(underline, { type: 'underline', color: '#4C956C', strokeWidth: 1, iterations: 3, animationDuration: 2000});
     annotation.show();
 });
