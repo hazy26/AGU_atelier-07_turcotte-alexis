@@ -1,0 +1,17 @@
+@use 'partials/variables' as var;
+
+header{
+    align-items: center;
+    background-color: var.$color-black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 2rem;
+
+    h1{
+        color: var.$color-white;
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: 3;
+    }
+}
